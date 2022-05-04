@@ -1,0 +1,74 @@
+@import "../../assets/styles/variables";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-bottom: 0.5px solid rgb(226, 226, 226);
+  background-color: $mode-light-color;
+
+  .wrapper {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    width: 100%;
+
+    .search {
+      display: flex;
+      align-items: center;
+      border: $input-border;
+      border-radius: $input-border-radius;
+      margin-left: 10px;
+
+      input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .items {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        position: relative;
+
+        .icon {
+          font-size: 22px;
+        }
+
+        .avatar {
+          height: 35px;
+          width: 35px;
+          border-radius: 50%;
+        }
+
+        .counter {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          font-weight: bold;
+          width: 15px;
+          height: 15px;
+          background-color: red;
+          border-radius: 50%;
+          color: white;
+
+          position: absolute;
+          left: 12px;
+          top: -4px;
+        }
+      }
+    }
+  }
+}
