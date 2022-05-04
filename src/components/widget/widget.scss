@@ -1,0 +1,60 @@
+@import "../../assets/styles/variables";
+
+.widget {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  height: 100px;
+  padding: 10px;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.27);
+  border-radius: $primary-border-radius;
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .title {
+      font-weight: bold;
+      font-size: 14px;
+      color: $text-gray-color;
+    }
+
+    .counter {
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .link {
+      width: max-content;
+      font-size: 12px;
+      border-bottom: 1px solid $text-gray-color;
+      color: $text-gray-color;
+      cursor: pointer;
+    }
+
+    .percentage {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+
+      &.positive {
+        color: $success-color;
+      }
+      &.negative {
+        color: $error-color;
+      }
+    }
+
+    .icon {
+      //   background-color: $icon-background-color;
+      border-radius: $primary-border-radius;
+      padding: 8px;
+      align-self: flex-end;
+      cursor: pointer;
+      width: 65%;
+    }
+  }
+}
