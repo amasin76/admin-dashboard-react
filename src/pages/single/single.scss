@@ -1,0 +1,113 @@
+@import "../../assets/styles/variables";
+
+.single {
+  display: flex;
+  width: 100%;
+  overflow: hidden; //context chart flow over
+
+  .singleContainer {
+    flex: 6;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      //   height: 300px;
+      padding: 20px;
+
+      .left {
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.27);
+        border-radius: $primary-border-radius;
+        flex: 1;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        padding: 10px;
+        position: relative;
+
+        .editButton {
+          border-radius: 0 $primary-border-radius 0 $primary-border-radius;
+          //   border: 1px solid $info-color;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          font-size: 18px;
+          padding: 5px;
+          color: $info-color;
+          background-color: #{$info-color}33;
+
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          cursor: pointer;
+
+          .icon {
+            font-size: 20px;
+          }
+
+          &:hover {
+            background-color: $info-color;
+            color: $mode-light-color;
+          }
+        }
+
+        .title {
+          color: $text-gray-color;
+        }
+
+        .item {
+          display: flex;
+          gap: 20px;
+          color: $mode-dark-color;
+
+          .itemImg {
+            display: flex;
+            border-radius: 50%;
+            object-fit: cover;
+            width: 100px;
+            height: 100px;
+          }
+
+          .details {
+            margin-bottom: 10px;
+
+            .itemTitle {
+              margin: 0;
+              padding: 0;
+            }
+
+            .itemDetail {
+              margin-bottom: 10px;
+              font-size: 14px;
+
+              .itemKey {
+                font-weight: 700;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.27);
+        border-radius: $primary-border-radius;
+        flex: 2;
+      }
+    }
+
+    .bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.27);
+      border-radius: $primary-border-radius;
+      margin: 0 20px;
+      padding: 10px;
+
+      .title {
+        color: $text-gray-color;
+      }
+    }
+  }
+}
