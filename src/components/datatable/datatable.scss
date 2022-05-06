@@ -1,0 +1,141 @@
+@import "../../assets/styles/variables";
+
+.datatable {
+  height: 600px;
+  padding: 20px;
+
+  .top {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.27);
+    border-radius: $primary-border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      color: $text-gray-color;
+      padding: 10px;
+    }
+
+    .newButton {
+      border-radius: 0 $primary-border-radius $primary-border-radius 0;
+      border: 1px solid $info-color;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 18px;
+      color: $info-color;
+      background-color: #{$info-color}33;
+      cursor: pointer;
+      height: 100%;
+      padding: 12px;
+      font-weight: 700;
+
+      .icon {
+        font-size: 26px;
+        font-weight: 800;
+      }
+
+      &:hover {
+        background-color: $info-color;
+        color: $mode-light-color;
+      }
+    }
+  }
+
+  .tableContainer {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.27);
+    border-radius: $primary-border-radius;
+    margin: 20px 0px;
+    padding: 20px;
+
+    .cellWithImg {
+      display: flex;
+      align-items: center;
+
+      .cellImg {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+    }
+
+    .cellWithStatus {
+      padding: 5px;
+      border-radius: $primary-border-radius;
+      display: block;
+      text-align: center;
+      width: 100%;
+      min-width: min-content;
+
+      &.active {
+        color: $success-color;
+        background-color: #{$success-color}22;
+      }
+      &.pending {
+        color: $warning-color;
+        background-color: #{$warning-color}22;
+      }
+      &.passive {
+        color: $error-color;
+        background-color: #{$error-color}22;
+      }
+    }
+
+    .cellAction {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 10px;
+
+      .viewButton {
+        border-radius: $primary-border-radius;
+        border: 1px solid $info-color;
+        padding: 3px 5px;
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        color: $info-color;
+        cursor: pointer;
+
+        .icon {
+          font-size: 22px;
+        }
+
+        &:hover {
+          background-color: $info-color;
+          color: $mode-light-color;
+        }
+      }
+      .deleteButton {
+        border-radius: $primary-border-radius;
+        border: 1px solid $error-color;
+        padding: 3px 5px;
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        color: $error-color;
+        cursor: pointer;
+
+        .icon {
+          font-size: 22px;
+        }
+
+        &:hover {
+          background-color: $error-color;
+          color: $mode-light-color;
+        }
+      }
+    }
+  }
+}
