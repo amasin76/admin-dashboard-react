@@ -31,10 +31,12 @@ const Datatable = ({ title }) => {
     <div className="datatable">
       <div className="top">
         <h2 className="title">{title ? title : "Add New User"}</h2>
-        <div className="newButton">
-          <AddIcon className="icon" />
-          <span>NEW</span>
-        </div>
+        <Link to="/users/new" style={{ textDecoration: "none" }}>
+          <div className="newButton">
+            <AddIcon className="icon" />
+            <span>NEW</span>
+          </div>
+        </Link>
       </div>
       <div className="tableContainer">
         <DataGrid
