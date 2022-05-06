@@ -1,4 +1,11 @@
 {
   "cSpell.words": [],
-  "cSpell.ignoreWords": ["predeploy", "ASUS", "Redragon", "Strix"]
+  "cSpell.ignoreWords": [
+    "ASUS",
+    "Redragon",
+    "Strix",
+    "datatable",
+    "datatablesource",
+    "predeploy"
+  ]
 }
