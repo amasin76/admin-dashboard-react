@@ -11,69 +11,96 @@ import NoteAltIcon from "@mui/icons-material/NoteAltOutlined";
 import SettingsIcon from "@mui/icons-material/SettingsOutlined";
 import AccountCircleIcon from "@mui/icons-material/AccountCircleOutlined";
 import LogoutIcon from "@mui/icons-material/Logout";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">BioAdmin</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">BioAdmin</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <li>
-            <DashboardIcon className="icon" />
-            <span>Dashboard</span>
-          </li>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <li>
+              <DashboardIcon className="icon" />
+              <span>Dashboard</span>
+            </li>
+          </Link>
           <p className="title">LISTS</p>
-          <li>
-            <PersonIcon className="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <StoreIcon className="icon" />
-            <span>Products</span>
-          </li>
-          <li>
-            <CreditCardIcon className="icon" />
-            <span>Orders</span>
-          </li>
-          <li>
-            <LocalShippingIcon className="icon" />
-            <span>Delivery</span>
-          </li>
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <PersonIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
+          <Link to="/orders" style={{ textDecoration: "none" }}>
+            <li>
+              <CreditCardIcon className="icon" />
+              <span>Orders</span>
+            </li>
+          </Link>
+          <Link to="/delivery" style={{ textDecoration: "none" }}>
+            <li>
+              <LocalShippingIcon className="icon" />
+              <span>Delivery</span>
+            </li>
+          </Link>
           <p className="title">MONITORING</p>
-          <li>
-            <InsertChartIcon className="icon" />
-            <span>Stats</span>
-          </li>
-          <li>
-            <NotificationsIcon className="icon" />
-            <span>Notifications</span>
-          </li>
+          <Link to="/stats" style={{ textDecoration: "none" }}>
+            <li>
+              <InsertChartIcon className="icon" />
+              <span>Stats</span>
+            </li>
+          </Link>
+          <Link to="/notifications" style={{ textDecoration: "none" }}>
+            <li>
+              <NotificationsIcon className="icon" />
+              <span>Notifications</span>
+            </li>
+          </Link>
           <p className="title">SERVICE</p>
-          <li>
-            <FavoriteIcon className="icon" />
-            <span>System Health</span>
-          </li>
-          <li>
-            <NoteAltIcon className="icon" />
-            <span>Logs</span>
-          </li>
-          <li>
-            <SettingsIcon className="icon" />
-            <span>Settings</span>
-          </li>
+          <Link to="/system-health" style={{ textDecoration: "none" }}>
+            <li>
+              <FavoriteIcon className="icon" />
+              <span>System Health</span>
+            </li>
+          </Link>
+          <Link to="/logs" style={{ textDecoration: "none" }}>
+            <li>
+              <NoteAltIcon className="icon" />
+              <span>Logs</span>
+            </li>
+          </Link>
+          <Link to="/settings" style={{ textDecoration: "none" }}>
+            <li>
+              <SettingsIcon className="icon" />
+              <span>Settings</span>
+            </li>
+          </Link>
           <p className="title">ACCOUNT</p>
-          <li>
-            <AccountCircleIcon className="icon" />
-            <span>Profile</span>
-          </li>
-          <li>
-            <LogoutIcon className="icon" />
-            <span>Logout</span>
-          </li>
+          <Link to="/profile" style={{ textDecoration: "none" }}>
+            <li>
+              <AccountCircleIcon className="icon" />
+              <span>Profile</span>
+            </li>
+          </Link>
+          <Link to="/logout" style={{ textDecoration: "none" }}>
+            <li>
+              <LogoutIcon className="icon" />
+              <span>Logout</span>
+            </li>
+          </Link>
         </ul>
       </div>
       <div className="bottom">
