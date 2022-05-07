@@ -7,9 +7,11 @@
   .sidebar {
     background-color: $mode-black-color;
     border-color: $text-gray-color;
+    border-right: 0.5px solid $container-dark-color;
 
     .top {
       border-color: $text-gray-color;
+      border-bottom: 0.5px solid #444;
     }
   }
 
@@ -17,6 +19,7 @@
     background-color: $mode-black-color;
     color: $text-gray-color;
     border-color: $text-gray-color;
+    border-bottom: 0.5px solid #444;
   }
 
   .container {
