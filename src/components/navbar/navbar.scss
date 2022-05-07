@@ -16,9 +16,14 @@
     .search {
       display: flex;
       align-items: center;
-      border: $input-border;
+      border: 1px solid #444;
       border-radius: $input-border-radius;
       margin-left: 10px;
+
+      &:hover {
+        border-color: $primary-color;
+        color: $primary-color;
+      }
 
       input {
         border: none;
@@ -27,6 +32,12 @@
 
         &::placeholder {
           font-size: 12px;
+        }
+
+        &:focus {
+          outline: none;
+          font-size: 16px;
+          // color: $primary-color;
         }
       }
     }
