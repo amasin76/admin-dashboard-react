@@ -3,13 +3,23 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { productInputs, userInputs } from "./services/formSource";
+import "./style/dark.scss";
+import "./style/black.scss";
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
 
 function App() {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
-    <div className="App">
-      <BrowserRouter>
+    <div
+      className={
+        darkMode === 1 ? "app dark" : darkMode === 2 ? "app black" : "app"
+      }
+    >
+      <HashRouter>
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
@@ -32,7 +42,7 @@ function App() {
             </Route>
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

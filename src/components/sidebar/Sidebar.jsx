@@ -12,8 +12,12 @@ import SettingsIcon from "@mui/icons-material/SettingsOutlined";
 import AccountCircleIcon from "@mui/icons-material/AccountCircleOutlined";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
 
 function Sidebar() {
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
     <div className="sidebar">
       <div className="top">
@@ -21,7 +25,6 @@ function Sidebar() {
           <span className="logo">BioAdmin</span>
         </Link>
       </div>
-      <hr />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
@@ -104,9 +107,18 @@ function Sidebar() {
         </ul>
       </div>
       <div className="bottom">
-        <div className="color-option"></div>
-        <div className="color-option"></div>
-        <div className="color-option"></div>
+        <div
+          className="color-option"
+          onClick={() => dispatch({ type: 0 })}
+        ></div>
+        <div
+          className="color-option"
+          onClick={() => dispatch({ type: 1 })}
+        ></div>
+        <div
+          className="color-option"
+          onClick={() => dispatch({ type: 2 })}
+        ></div>
       </div>
     </div>
   );

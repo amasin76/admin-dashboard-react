@@ -29,7 +29,7 @@ const Datatable = ({ title }) => {
 
   return (
     <div className="datatable">
-      <div className="top">
+      <div className="top container">
         <h2 className="title">{title ? title : "Add New User"}</h2>
         <Link to="/users/new" style={{ textDecoration: "none" }}>
           <div className="newButton">
@@ -38,8 +38,9 @@ const Datatable = ({ title }) => {
           </div>
         </Link>
       </div>
-      <div className="tableContainer">
+      <div className="tableContainer container">
         <DataGrid
+          className="datagrid"
           rows={userRows}
           columns={userColumns.concat(actionColumns)}
           pageSize={6}

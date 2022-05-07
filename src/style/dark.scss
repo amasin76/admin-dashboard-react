@@ -1,0 +1,67 @@
+@import "../assets/styles/variables";
+
+.app.dark {
+  background-color: $mode-dark-color;
+  color: $text-light-color;
+
+  .sidebar {
+    background-color: $mode-dark-color;
+    border-color: $text-gray-color;
+
+    .top {
+      border-color: $text-gray-color;
+    }
+  }
+
+  .navbar {
+    background-color: $mode-dark-color;
+    color: $text-gray-color;
+    border-color: $text-gray-color;
+  }
+
+  .container {
+    background-color: $container-dark-color;
+  }
+
+  .table {
+    background-color: $container-dark-color;
+  }
+
+  .chartGrid {
+    stroke: #444;
+  }
+
+  .tableCell {
+    color: $text-light-color;
+  }
+
+  .datatable {
+    .datagrid {
+      color: $text-light-color;
+      border: none;
+
+      .MuiDataGrid-columnHeaderTitle {
+        color: $text-gray-color;
+      }
+
+      .MuiDataGrid-iconSeparator {
+        display: none;
+      }
+
+      .MuiTablePagination-toolbar {
+        color: $text-gray-color;
+      }
+    }
+  }
+
+  input {
+    background-color: transparent;
+    color: $text-light-color;
+    border: none;
+
+    &:focus {
+      outline-style: solid;
+      outline-width: 1px;
+    }
+  }
+}

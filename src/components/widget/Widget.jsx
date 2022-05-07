@@ -55,7 +55,7 @@ function Widget({ type }) {
             className="icon"
             style={{
               backgroundColor: "rgba(0, 255, 55, 0.25)",
-              color: "rgb(0, 255, 55)",
+              color: "rgb(0, 230, 0)",
             }}
           />
         ),
@@ -71,7 +71,7 @@ function Widget({ type }) {
             className="icon"
             style={{
               backgroundColor: "rgba(0, 132, 255, 0.25)",
-              color: "rgb(0, 132, 255)",
+              color: "rgb(0, 180, 255)",
             }}
           />
         ),
@@ -81,7 +81,7 @@ function Widget({ type }) {
       break;
   }
   return (
-    <div className="widget">
+    <div className="widget container">
       <div className="left">
         <span className="title">{data.title}</span>
         <span className="counter">

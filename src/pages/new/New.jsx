@@ -12,10 +12,10 @@ const New = ({ inputs, title }) => {
       <Sidebar />
       <div className="newContainer">
         <Navbar />
-        <div className="top">
+        <div className="top container">
           <h1>{title}</h1>
         </div>
-        <div className="bottom">
+        <div className="bottom container">
           <div className="left">
             <img
               src={

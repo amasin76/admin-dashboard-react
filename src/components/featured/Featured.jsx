@@ -7,7 +7,7 @@ import "react-circular-progressbar/dist/styles.css";
 
 function Featured() {
   return (
-    <div className="featured">
+    <div className="featured container">
       <div className="top">
         <h2 className="title">Total Revenue</h2>
         <MoreVertOutlinedIcon />

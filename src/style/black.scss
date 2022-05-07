@@ -1,0 +1,70 @@
+@import "../assets/styles/variables";
+
+.app.black {
+  background-color: $mode-black-color;
+  color: $text-light-color;
+
+  .sidebar {
+    background-color: $mode-black-color;
+    border-color: $text-gray-color;
+
+    .top {
+      border-color: $text-gray-color;
+    }
+  }
+
+  .navbar {
+    background-color: $mode-black-color;
+    color: $text-gray-color;
+    border-color: $text-gray-color;
+  }
+
+  .container {
+    background-color: $container-black-color;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(110, 110, 110, 0.35);
+    box-shadow: 2px 4px 10px 1px rgba(110, 110, 110, 0.35);
+    border-radius: $primary-border-radius;
+  }
+
+  .table {
+    background-color: $container-black-color;
+  }
+
+  .chartGrid {
+    stroke: #444;
+  }
+
+  .tableCell {
+    color: $text-light-color;
+  }
+
+  .datatable {
+    .datagrid {
+      color: $text-light-color;
+      border: none;
+
+      .MuiDataGrid-columnHeaderTitle {
+        color: $text-gray-color;
+      }
+
+      .MuiDataGrid-iconSeparator {
+        display: none;
+      }
+
+      .MuiTablePagination-toolbar {
+        color: $text-gray-color;
+      }
+    }
+  }
+
+  input {
+    background-color: transparent;
+    color: $text-light-color;
+    border: none;
+
+    &:focus {
+      outline-style: solid;
+      outline-width: 1px;
+    }
+  }
+}

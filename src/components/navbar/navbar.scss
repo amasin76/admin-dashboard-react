@@ -41,6 +41,11 @@
         align-items: center;
         gap: 3px;
         position: relative;
+        cursor: pointer;
+
+        &:hover {
+          color: $primary-color;
+        }
 
         .icon {
           font-size: 22px;

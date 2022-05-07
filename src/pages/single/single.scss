@@ -21,7 +21,7 @@
         border-radius: $primary-border-radius;
         flex: 1;
         display: flex;
-        gap: 10px;
+        gap: 15px;
         flex-direction: column;
         padding: 10px;
         position: relative;
@@ -59,7 +59,7 @@
         .item {
           display: flex;
           gap: 20px;
-          color: $mode-dark-color;
+          height: 100%;
 
           .itemImg {
             display: flex;
@@ -70,8 +70,6 @@
           }
 
           .details {
-            margin-bottom: 10px;
-
             .itemTitle {
               margin: 0;
               padding: 0;

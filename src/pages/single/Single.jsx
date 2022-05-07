@@ -12,7 +12,7 @@ function Single() {
       <div className="singleContainer">
         <Navbar />
         <div className="top">
-          <div className="left">
+          <div className="left container">
             <div className="editButton">
               <EditIcon className="icon" />
               Edit
@@ -35,12 +35,16 @@ function Single() {
                   <span className="itemValue">+212 662-586932</span>
                 </div>
                 <div className="itemDetail">
+                  <span className="itemKey">Country:</span>
+                  <span className="itemValue">Morocco (MA)</span>
+                </div>
+                <div className="itemDetail">
                   <span className="itemKey">Address:</span>
                   <span className="itemValue">Tasnu St. 264 Yanil Watilo</span>
                 </div>
                 <div className="itemDetail">
-                  <span className="itemKey">Country:</span>
-                  <span className="itemValue">Morocco (MA)</span>
+                  <span className="itemKey">Total Purchase:</span>
+                  <span className="itemValue">$ 1800</span>
                 </div>
               </div>
             </div>
@@ -52,7 +56,7 @@ function Single() {
             />
           </div>
         </div>
-        <div className="bottom">
+        <div className="bottom container">
           <h2 className="title">Last Transactions</h2>
           <List />
         </div>
