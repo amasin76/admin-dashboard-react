@@ -8,6 +8,12 @@
   .singleContainer {
     flex: 6;
 
+    .container {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.27);
+      border-radius: $primary-border-radius;
+    }
+
     .top {
       display: flex;
       justify-content: space-between;
@@ -16,9 +22,6 @@
       padding: 20px;
 
       .left {
-        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.27);
-        border-radius: $primary-border-radius;
         flex: 1;
         display: flex;
         gap: 15px;
@@ -97,9 +100,6 @@
     }
 
     .bottom {
-      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-      box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.27);
-      border-radius: $primary-border-radius;
       margin: 0 20px;
       padding: 10px;
 
