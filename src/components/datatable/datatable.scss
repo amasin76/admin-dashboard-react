@@ -47,6 +47,7 @@
     .cellWithImg {
       display: flex;
       align-items: center;
+      overflow: hidden;
 
       .cellImg {
         width: 32px;
@@ -54,6 +55,11 @@
         border-radius: 50%;
         object-fit: cover;
         margin-right: 10px;
+      }
+
+      .cellText {
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
     }
 
