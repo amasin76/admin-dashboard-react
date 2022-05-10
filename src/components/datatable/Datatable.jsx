@@ -1,12 +1,14 @@
 import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../../services/datatablesource";
+import /*userColumns, userRows*/ "../../services/datatablesource";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import { Link } from "react-router-dom";
 
-const Datatable = ({ title }) => {
+const Datatable = ({ title, columns, rows, status, error }) => {
+  console.log(status);
+  console.log(error);
   const actionColumns = {
     field: "action",
     headerName: "Action",
@@ -39,15 +41,19 @@ const Datatable = ({ title }) => {
         </Link>
       </div>
       <div className="tableContainer container">
-        <DataGrid
-          className="datagrid"
-          rows={userRows}
-          columns={userColumns.concat(actionColumns)}
-          pageSize={6}
-          rowsPerPageOptions={[6]}
-          checkboxSelection
-          autoHeight={true}
-        />
+        {status === "isLoading" && <>Wait...</>}
+        {status === "isError" && <>Error: {error}</>}
+        {status === "success" && (
+          <DataGrid
+            className="datagrid"
+            rows={rows}
+            columns={columns.concat(actionColumns)}
+            pageSize={6}
+            rowsPerPageOptions={[6]}
+            checkboxSelection
+            autoHeight={true}
+          />
+        )}
       </div>
     </div>
   );
